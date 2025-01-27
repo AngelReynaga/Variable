@@ -1,20 +1,58 @@
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      <strong>Registro de Usuarios</strong>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large"></ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
+    <div>
+      <div class="mt-6 border-t border-indigo-300">
+    <dl class="divide-y divide-black-200">
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm/6 font-semibold text-gray-900">Nombre</dt>
+        <dd class="mt-1 text-sm/6 font-medium text-gray-700 sm:col-span-2 sm:mt-0"><input id="name"  type="text"></dd>
+      </div>
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm/6 font-semibold text-gray-900">Correo Electronico</dt>
+        <dd class="mt-1 text-sm/6 font-medium text-gray-700 sm:col-span-2 sm:mt-0"><input id="date1" type="text"></dd>
+      </div>
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm/6 font-semibold text-gray-900">Username</dt>
+        <dd class="mt-1 text-sm/6 font-medium text-gray-700 sm:col-span-2 sm:mt-0"><input id="incharge"  type="text"></dd>
+      </div>
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm/6 font-semibold text-gray-900">Contraseña</dt>
+        <dd class="mt-1 text-sm/6 font-medium text-gray-700 sm:col-span-2 sm:mt-0"><input id="telephone"  type="text"></dd>
+      </div>
+    </dl>
+    <button onclick="chamba()" type="button" class="bg-blue-100 -m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">Añadir Usuario</button>
+  </div>
+  <br><br><br>
+  <table id="tablita" class="min-w-full bg-white border border-gray-400">
+    <tr>
+    <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left">Nombre</th>
+    <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left">Correo Electronico</th>
+    <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left">Username</th>
+    <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left">Contraseña</th>
+    <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left">Eliminar</th>
+    </tr>
+    
+    </table>
+</div>
+<div id="id" style="visibility: hidden;">1</div>
+    <!--
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    -->
   </div>
 </ion-content>

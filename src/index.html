@@ -24,3 +24,54 @@
 </body>
 
 </html>
+<script type="text/javascript">
+  function chamba()
+  {
+    var name=document.getElementById("name").value;
+    var date1=document.getElementById("date1").value;
+    var incharge=document.getElementById("incharge").value;
+    var telephone=document.getElementById("telephone").value;
+    var id=document.getElementById("id").value;
+    if(name=="" || date1=="" || incharge=="" || telephone=="")
+    alert("Por favor, rellene todos los campos");
+    else
+    {
+      const row = document.createElement("tr");
+      row.setAttribute('id',id);
+      const col1 = document.createElement("td");
+      const col2 = document.createElement("td");
+      const col3 = document.createElement("td");
+      const col4 = document.createElement("td");
+      const col5 = document.createElement("td");
+      col1.innerHTML = name;
+      col2.innerHTML = date1;
+      col3.innerHTML = incharge;
+      col4.innerHTML = telephone;
+      const check = document.createElement("button");
+      check.innerHTML = "Eliminar";
+      //check.setAttribute('id', 'b'+id);
+      check.onclick = function()
+      {
+        let cosa=document.getElementById(id);
+        cosa.remove();
+      }
+      col5.appendChild(check);
+      /*
+      const textcol1 = document.createTextNode(name);
+      const textcol2 = document.createTextNode(date1);
+      const textcol3 = document.createTextNode(date2);
+      const textcol4 = document.createTextNode(incharge);
+      const textcol5 = document.createTextNode(telephone);
+      const textcol6 = document.createElement("input");
+      */
+      row.appendChild(col1);
+      row.appendChild(col2);
+      row.appendChild(col3);
+      row.appendChild(col4);
+      row.appendChild(col5);
+      document.getElementById("tablita").appendChild(row);
+      document.getElementById("id").innerHTML=id+1;
+    }
+    
+  }
+</script>
