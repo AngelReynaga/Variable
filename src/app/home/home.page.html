@@ -1,20 +1,52 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      <strong>Lista de Tareas</strong>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large"></ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div>
+      <div class="mt-6 border-t border-indigo-300">
+    <dl class="divide-y divide-black-200">
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm/6 font-semibold text-gray-900">Tarea</dt>
+        <dd class="mt-1 text-sm/6 font-medium text-gray-700 sm:col-span-2 sm:mt-0"><input id="name" placeholder="Nombre" type="text"></dd>
+      </div>
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm/6 font-semibold text-gray-900">Materia</dt>
+        <dd class="mt-1 text-sm/6 font-medium text-gray-700 sm:col-span-2 sm:mt-0"><input id="subject" placeholder="Materia" type="text"></dd>
+      </div>
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm/6 font-semibold text-gray-900">Fecha limite</dt>
+        <dd class="mt-1 text-sm/6 font-medium text-gray-700 sm:col-span-2 sm:mt-0"><input id="date" type="date"></dd>
+      </div>
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm/6 font-semibold text-gray-900">Descripción</dt>
+        <dd class="mt-1 text-sm/6 font-medium text-gray-700 sm:col-span-2 sm:mt-0"><input class="w-200" id="description" placeholder="Descripción" type="text"></dd>
+      </div>
+    </dl>
+    <button onclick="chamba()" type="button" class="bg-blue-100 -m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">Registrar tarea</button>
+  </div>
+  <br><br><br>
+  <table id="tablita" class="min-w-full bg-white border border-gray-400">
+    <tr>
+    <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left">Tarea</th>
+    <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left">Materia</th>
+    <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left">Fecha limite</th>
+    <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left">Descripción</th>
+    <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left">Finalizada</th>
+    </tr>
+    </table>
+</div>
   </div>
 </ion-content>
